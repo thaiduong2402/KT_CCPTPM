@@ -8,14 +8,22 @@
 <body>
 	<div>
 		<p>Tên đăng nhập: </p>
-		<input type="text">
+		<input id="username" type="text">
 		<br>
 		<p>Mật khẩu: </p>
-		<p id="Matkhau">Password: </p>
-		<input type="password">
+		<input id="Matkhau" type="password">
 
 
-		<button>Dang Nhap</button>
+		<button onclick="myFunction()">Đăng Nhập</button>
 	</div>
 </body>
+<script>
+	function myFunction() {
+		var id =document.getElementById("username").value;
+		var pw =document.getElementById("Matkhau").value;
+		if(id=="admin" && pw=="admin") {
+			window.location="./login.html";
+		}
+	}
+</script>
 </html>
